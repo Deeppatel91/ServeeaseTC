@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
-import TermsandCondition from './components/TermsandCondition'; // Import the TermsandCondition component
-import About from './components/About'; // Import the About component
+import TermsandCondition from './components/TermsandCondition';
+import About from './components/About';
 
 const App = () => {
-  const [isAuthenticated] = useState(false); // State to manage authentication status
+  const [isAuthenticated] = useState(false); // Only destructure what you need
 
   // Protected Route Component
   const ProtectedRoute = ({ children }) => {
