@@ -5,7 +5,7 @@ import TermsandCondition from './components/TermsandCondition'; // Import the Te
 import About from './components/About'; // Import the About component
 
 const App = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // State to manage authentication status
+  const [isAuthenticated] = useState(false); // State to manage authentication status
 
   // Protected Route Component
   const ProtectedRoute = ({ children }) => {
