@@ -5,9 +5,8 @@ import TermsandCondition from './components/TermsandCondition';
 import About from './components/About';
 
 const App = () => {
-  const [isAuthenticated] = useState(false); // Only destructure what you need
+  const [isAuthenticated] = useState(false);
 
-  // Protected Route Component
   const ProtectedRoute = ({ children }) => {
     return isAuthenticated ? children : <Navigate to="/" replace />;
   };
@@ -17,11 +16,8 @@ const App = () => {
       <div>
         <div>
           <Routes>
-            {/* Unprotected Routes */}
             <Route path="/TermsandCondition" element={<TermsandCondition />} />
             <Route path="/About" element={<About />} />
-
-            {/* Example of a Protected Route */}
             <Route
               path="/protected"
               element={
@@ -30,8 +26,6 @@ const App = () => {
                 </ProtectedRoute>
               }
             />
-
-            {/* Default Route */}
             <Route path="/" element={<div>Home Page</div>} />
           </Routes>
         </div>
